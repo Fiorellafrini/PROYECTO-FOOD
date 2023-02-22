@@ -1,8 +1,7 @@
-const { Diet, Recipe, RecipesDiet } = require("../db");
-// const searchRecipesInApiAndDB = require("../routes/recipes-getAllRecipes")
 const { Router } = require("express");
-
-
+const { Diet, Recipe, RecipesDiet } = require("../db");
+const getApiInfo = require("../routes/apiInfo");
+// const specialCharactresTypeRegex = /[0-9@:%._+~#=]/gi;
 
 
 
