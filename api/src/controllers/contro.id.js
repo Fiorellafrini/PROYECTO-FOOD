@@ -15,14 +15,13 @@ async function getRecipeById(id) {
     if (!data) throw new Error("Error en la API");
   
     //buscamos en la Api una receta que tenga el id que recibimos por parametros
-    let findRecipe = data.find((recipe) => {
-      return recipe.id === id;
-    });
+    let findRecipe = data.find(recipe => recipe.id === id)
+    // });
   
-    //Si ninguna coincide, buscamos en la base de datos
+    // //Si ninguna coincide, buscamos en la base de datos
     if (!findRecipe) throw new Error("El id ingresado no existe");
   
-    return findRecipe;
+      return findRecipe;
   }
-
+  
   module.exports= { getRecipeById };

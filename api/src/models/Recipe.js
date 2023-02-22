@@ -10,7 +10,7 @@ module.exports = (sequelize) => {
       type: DataTypes.UUID, //Universal Unique Identifier ,  identificador único generado por máquina de un cierto rango. Es para generar ID largos y diferentes que no se pisen con los que están en la API.
       defaultValue: DataTypes.UUIDV4, //version 4, las otras son pseudoaleatorias
       primaryKey: true,
-      allowNull: false
+      // allowNull: false
     },
     name: {
       type: DataTypes.STRING,
@@ -42,7 +42,7 @@ module.exports = (sequelize) => {
    },
   },
   {
-    // paranoid: true,
+    paranoid: true,
     timestamps: false,
   },
 );

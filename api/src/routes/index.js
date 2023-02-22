@@ -6,7 +6,7 @@ const router = Router();
 // Importar todos los routers;
 //voy a hacer mi enrutador-
 
-const recipesRoutes = require("./recipes-getAllRecipes");
+const searchRecipesInApiAndDB = require("./recipes-getAllRecipes");
 const recipesGetId = require("./recipes-id");
 const recipesGetName = require("./recipes-name");
 const recipesPost = require("./recipes-post");
@@ -22,7 +22,7 @@ router.use(recipesPost);
 router.use(deleteRecipe);
 router.use(putRecipe);
 router.use(dietGet);
-router.use(recipesRoutes);
+router.use(searchRecipesInApiAndDB);
 
 
 

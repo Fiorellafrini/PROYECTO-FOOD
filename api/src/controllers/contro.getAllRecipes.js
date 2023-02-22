@@ -1,5 +1,5 @@
 const { Diet, Recipe, RecipesDiet } = require("../db");
-const searchRecipesInApiAndDB = require("../routes/recipes-getAllRecipes")
+// const searchRecipesInApiAndDB = require("../routes/recipes-getAllRecipes")
 const { Router } = require("express");
 
 
@@ -16,4 +16,4 @@ async function searchRecipesInApiAndDB() {
 }
 
 
-module.exports= searchRecipesInApiAndDB
+module.exports= {searchRecipesInApiAndDB}

@@ -7,14 +7,20 @@ const { getRecipeById } = require("../controllers/contro.id");
 
 //Buscar receta por id
 recipesGetId.get("/recipes/:id", async (req, res) => {
-    try {
-      const { id } = req.params;
+  const { id } = req.params;
+   
+  try {
       const recipe = await getRecipeById(id);
-      res.status(200).send(recipe);
+      res.status(200).json(recipe);
     } catch (error) {
-      res.status(401).send(error.message);
+      res.status(400).json({error: error.message});
     }
   });
   
+
+
   module.exports = recipesGetId;
+
+
+
   

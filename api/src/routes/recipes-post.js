@@ -4,7 +4,7 @@ const { Diet, Recipe, RecipesDiet } = require("../db");
 
 
 //Creamos una receta y la guardamos en la base de datos
-recipesPost.post("/create", async (req, res) => {
+recipesPost.post("/", async (req, res) => {
   
     const { name, image, summary, healthScore, steps, dishTypes, diet } = req.body; //los datos que recibo por body son los modelos
 
