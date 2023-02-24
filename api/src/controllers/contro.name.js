@@ -3,9 +3,6 @@ const getApiInfo = require("../routes/apiInfo");
 const specialCharactresTypeRegex = /[0-9@:%._+~#=]/gi;
 
 
-
-
-
 async function searchByName(name) {
     //Validamos los datos ingresados en la busqueda
     if (!name)
@@ -31,3 +28,4 @@ async function searchByName(name) {
   }
 
   module.exports= { searchByName };
+
